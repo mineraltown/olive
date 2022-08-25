@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans" class="default">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        @font-face {
+            font-family: "MaruSC";
+            src: url('default.ttf');
+        }
+
+        html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: auto;
+            color: #6a3f2d;
+            font-family: "MaruSC";
+            user-select: none;
+            -webkit-touch-callout: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            -khtml-user-select: none;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: auto;
+            display: flex;
+            display: -webkit-flex;
+            flex-flow: column nowrap;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        a {
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            text-decoration: none;
+            color: #ca7b5a;
+            transition: color 0.3s;
+            -moz-transition: color 0.3s;
+            -webkit-transition: color 0.3s;
+            -o-transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #995c42;
+        }
+
+        a:active {
+            color: #6a3f2d;
+        }
+
+
+        /* PC */
+        @media screen and (min-width:801px) {
+
+            .welcome {
+                position: relative;
+                margin: 30px 0 20px 0;
+                width: auto;
+                height: 100px;
+            }
+
+            .welcome_img {
+                position: absolute;
+                width: 450px;
+                height: 100px;
+            }
+
+            .welcome_p {
+                position: relative;
+                width: 450px;
+                height: 100px;
+                line-height: 0.5em;
+                font-size: 2em;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            .old_story {
+                margin: 20px 0 20px 0;
+                font-size: 1.2em;
+                width: 100%;
+                display: flex;
+                display: -webkit-flex;
+                flex-flow: row nowrap;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #img00 {
+                width: 300px;
+                height: auto;
+                margin-left: 80px;
+            }
+
+            #img01 {
+                width: 500px;
+                height: auto;
+                margin-right: 100px;
+                border-radius: 8px;
+            }
+
+            #img02 {
+                width: 500px;
+                height: auto;
+                margin-left: 100px;
+                border-radius: 8px;
+            }
+
+            .card {
+                width: 100%;
+                display: flex;
+                display: -webkit-flex;
+                flex-flow: row nowrap;
+                justify-content: center;
+                align-items: center;
+                background-color: rgba(217, 181, 132, 0.5);
+                padding: 20px 0 20px 0;
+                margin: 10px 0 10px 0;
+            }
+
+            .cassette {
+                width: 200px;
+            }
+
+            .card_text {
+                width: 410px;
+                margin-left: 100px;
+            }
+
+            #info {
+                margin-top: 50px;
+            }
+
+            #feedback {
+                background: none;
+            }
+
+            p.fb {
+                display: flex;
+                display: -webkit-flex;
+                flex-flow: row nowrap;
+                justify-content: flex-start;
+                align-items: center;
+            }
+
+            span.fb {
+                margin-left: 1.5em;
+            }
+
+            span.mail {
+                margin-left: 1.5em;
+            }
+        }
+
+        /* Mobile */
+        @media screen and (max-width:800px) {
+
+            .welcome {
+                position: relative;
+                margin: 2em 0 3em 0;
+                width: 80%;
+                max-width: 360px;
+                height: auto;
+            }
+
+            .welcome_img {
+                position: absolute;
+                width: 100%;
+                height: auto;
+            }
+
+            .welcome_p {
+                position: relative;
+                line-height: 0.1em;
+                font-size: 1.7em;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            .old_story {
+                margin: 0;
+                padding-left: 5%;
+                font-size: 1em;
+                width: 90%;
+                display: flex;
+                display: -webkit-flex;
+                flex-flow: column-reverse wrap;
+                justify-content: center;
+                align-items: flex-start;
+                color: #333333;
+            }
+
+            #old_story_02 {
+                flex-flow: column wrap;
+            }
+
+            #img00 {
+                width: 300px;
+                max-width: 90%;
+                height: auto;
+            }
+
+            #img01 {
+                width: 500px;
+                max-width: 90%;
+                height: auto;
+                border-radius: 8px;
+            }
+
+            #img02 {
+                width: 500px;
+                max-width: 90%;
+                height: auto;
+                border-radius: 8px;
+            }
+
+            .card {
+                width: 100%;
+                display: flex;
+                display: -webkit-flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                align-items: center;
+                background-color: #e2e2e2;
+                padding: 1em 0 0 0;
+                color: #333333;
+                font-size: 0.8em;
+            }
+
+            .cassette {
+                width: auto;
+                max-width: 200px;
+            }
+
+            .card_text {
+                width: 80%;
+            }
+
+            #info {
+                margin-top: 1em;
+            }
+
+            #feedback {
+                background: none;
+            }
+
+            p.fb {
+                display: flex;
+                display: -webkit-flex;
+                flex-flow: row nowrap;
+                justify-content: flex-start;
+                align-items: center;
+            }
+
+            span.fb {
+                margin-left: 1.5em;
+            }
+
+            span.mail {
+                margin-left: 1.5em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="welcome">
+        <img src="image/prologue.png" class="welcome_img">
+        <p class="welcome_p">欢迎来到橄榄镇！</p>
+    </div>
+    <div class="old_story">
+        <div>
+            <p>过去由爷爷和他的伙伴们一起开拓出来的小镇，橄榄镇。</p>
+            <p>爷爷曾经高兴的谈起在那里的生活。</p>
+        </div>
+        <img src="image/prologue_img.png" id="img00">
+    </div>
+    <div class="old_story" id="old_story_02">
+        <img src="image/prologue_img01.jpg" id="img01">
+        <div>
+            <p>你想着总有一天要到镇上生活看看。</p>
+            <p>于是收拾行装，</p>
+            <p>一路向着橄榄镇进发。</p>
+        </div>
+    </div>
+    <div class="old_story">
+        <div>
+            <p>等到了小镇一看，</p0>
+            <p>爷爷的牧场早已荒废，</p>
+            <p>被森林覆盖。</p>
+            <p>你得到镇长的帮助，</p>
+            <p>决心让曾经的大牧场</p>
+            <p>得以复活。</p>
+        </div>
+        <img src="image/prologue_img02.jpg" id="img02">
+    </div>
+    <div class="card" id="info">
+        <img class="cassette" src="image/img_dl.png">
+        <div class="card_text">
+            <p><b>牧场物语 橄榄镇与希望的大地</b></p>
+            <p>发售日期：2021/2/25</p>
+            <p>对应机器：Nintendo Switch™</p>
+            <p>官方网站：<a href="https://www.bokumono.com/series/olive/" target="_blank">牧場物語 オリーブタウンと希望の大地</a></p>
+            <p>※ 仅亚洲版(港服)有简体/繁体中文，日版无中文。</p>
+        </div>
+    </div>
+    <div class="card" id="feedback">
+        <div class="cassette">
+            <img src="image/qrcode_for_weixin.png" width="100%">
+        </div>
+        <div class="card_text">
+            <p>如果您发现本站存在错误，请通过以下途径向我们反馈。</p>
+            <p class="fb"><img src="/icon/weibo-fill.svg"><span class="fb">微博：<a href="https://weibo.com/mineraltown/"
+                        target="_blank">@矿石镇</a></span></p>
+            <p class="fb"><img src="/icon/wechat-fill.svg"><span class="fb">微信公众号：矿石镇</span></p>
+            <p class="fb"><img src="/icon/mail-fill.svg"><span class="mail">邮箱：friends@mineraltown.net</span></p>
+        </div>
+    </div>
+</body>
+
+</html>

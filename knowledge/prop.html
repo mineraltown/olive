@@ -1,0 +1,1424 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
+    <link rel="stylesheet" href="../iframe.css">
+    <title>道具</title>
+    <style>
+        ul.link {
+            display: flex;
+            display: -webkit-flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .link li {
+            width: 6em;
+            cursor: default;
+        }
+
+        .flex_prop {
+            width: 100%;
+            padding-bottom: 1em;
+            display: flex;
+            display: -webkit-flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .scope {
+            flex-grow: 1;
+            width: auto;
+            display: flex;
+            display: -webkit-flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .scope table {
+            width: auto;
+        }
+
+        .scope th {
+            width: 20px;
+            height: 20px;
+            margin: 0;
+            padding: 0;
+            line-height: 0;
+            border: solid 1px #6a3f2d;
+        }
+
+        .mini {
+            font-size: 0.8em;
+        }
+
+        .invalid {
+            background-color: #edcf9a;
+        }
+
+        .valid {
+            background-color: #d9b584;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>道具</h1>
+    <p class="note">关于斧头、锤子等开拓牧场不可缺少的道具，了解使用和升级的方法。</p>
+    <ul class="link">
+        <li><a href="#斧头">斧头</a></li>
+        <li><a href="#镰刀">镰刀</a></li>
+        <li><a href="#锤子">锤子</a></li>
+        <li><a href="#水桶">水桶</a></li>
+        <li><a href="#钓竿">钓竿</a></li>
+        <li><a href="#锄头">锄头</a></li>
+        <li><a href="#洒水壶">洒水壶</a></li>
+        <li><a href="#照相机">照相机</a></li>
+        <li><a href="#牵绳">牵绳</a></li>
+    </ul>
+    <h2>使用道具</h2>
+    <img src="./prop/prop.jpg">
+    <p>※ 道具要从「工具袋」中拿出来，放到背包中才可以使用。</p>
+    <h2>升级道具</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>道具</th>
+                <th>铁</th>
+                <th>铜</th>
+                <th>金</th>
+                <th>材</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>价格</td>
+                <td>1,000G</td>
+                <td>3,000G</td>
+                <td>20,000G</td>
+                <td>150,000G</td>
+            </tr>
+            <tr>
+                <td>斧头</td>
+                <td rowspan="5">
+                    木材×3<br>
+                    铁锭×3
+                </td>
+                <td rowspan="5">
+                    坚硬的木材×5<br>
+                    银锭×5
+                </td>
+                <td rowspan="5">
+                    柔韧的木材×10<br>
+                    金锭×10
+                </td>
+                <td rowspan="5">
+                    粗壮的木材×20<br>
+                    梦幻的木材×5<br>
+                    金锭×20<br>
+                    山铜锭×5
+                </td>
+            </tr>
+            <tr>
+                <td>镰刀</td>
+            </tr>
+            <tr>
+                <td>锤子</td>
+            </tr>
+            <tr>
+                <td>锄头</td>
+            </tr>
+            <tr>
+                <td>钓竿</td>
+            </tr>
+            <tr>
+                <td>水桶</td>
+                <td rowspan="2">铁锭×3</td>
+                <td rowspan="2">银锭×5</td>
+                <td rowspan="2">金锭×10</td>
+                <td rowspan="2">金锭×20<br>山铜锭×5</td>
+            </tr>
+            <tr>
+                <td>洒水壶</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <div class="gamepad" id="斧头">
+        <div class="head"><img src="./prop/axe.png"></div>
+        <h2 class="left1em">斧头</h2>
+    </div>
+    <p><b>获得：第一天从维克托那里收到</b></p>
+    <p>柄尖装有巨大利刃的工具。<br>用力劈砍采伐木料吧。</p>
+    <div class="key">
+        <h3>消耗体力（每棵树）</h3>
+        <ul>
+            <li><b>采伐 Lv.1~2</b>：8（6）</li>
+            <li><b>采伐 Lv.3~5</b>：7（5）</li>
+            <li><b>采伐 Lv.6~10</b>：6（4）</li>
+        </ul>
+        <h3>蓄力范围</h3>
+        <div class="flex_prop">
+            <div class="scope">
+                <h4>最初</h4>
+                <table>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"><img src="/icon/arrow-right-s-fill.svg"></th>
+                        <th class="valid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                </table>
+            </div>
+            <div class="scope">
+                <h4>铁斧头</h4>
+                <table>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"><img src="/icon/arrow-right-s-fill.svg"></th>
+                        <th class="valid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                </table>
+            </div>
+            <div class="scope">
+                <h4>银斧头</h4>
+                <table>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                    </tr>
+                    <tr>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"><img src="/icon/arrow-right-s-fill.svg"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                    </tr>
+                    <tr>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                </table>
+            </div>
+            <div class="scope">
+                <h4>金斧头</h4>
+                <table>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                    </tr>
+                    <tr>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"><img src="/icon/arrow-right-s-fill.svg"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                    </tr>
+                    <tr>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                </table>
+            </div>
+            <div class="scope">
+                <h4>山铜斧头</h4>
+                <table>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                    </tr>
+                    <tr>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                    </tr>
+                    <tr>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"><img src="/icon/arrow-right-s-fill.svg"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                    </tr>
+                    <tr>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                    </tr>
+                    <tr>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="gamepad" id="镰刀">
+        <div class="head"><img src="./prop/sickle.png"></div>
+        <h2 class="left1em">镰刀</h2>
+    </div>
+    <p><b>获得：第一天从维克托那里收到</b></p>
+    <p>专为割草而设计的工具。</p>
+    <div class="key">
+        <h3>消耗体力（每株草）</h3>
+        <ul>
+            <li><b>割草 Lv.1~2</b>：8（6）</li>
+            <li><b>割草 Lv.3~5</b>：7（5）</li>
+            <li><b>割草 Lv.6~10</b>：6（4）</li>
+        </ul>
+        <h3>蓄力范围</h3>
+        <div class="flex_prop">
+            <div class="scope">
+                <h4>最初</h4>
+                <table>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"><img src="/icon/arrow-right-s-fill.svg"></th>
+                        <th class="valid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                </table>
+            </div>
+            <div class="scope">
+                <h4>铁镰刀</h4>
+                <table>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"><img src="/icon/arrow-right-s-fill.svg"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                </table>
+            </div>
+            <div class="scope">
+                <h4>银镰刀</h4>
+                <table>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"><img src="/icon/arrow-right-s-fill.svg"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                    </tr>
+                </table>
+            </div>
+            <div class="scope">
+                <h4>金镰刀</h4>
+                <table>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"><img src="/icon/arrow-right-s-fill.svg"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                    </tr>
+                </table>
+            </div>
+            <div class="scope">
+                <h4>山铜镰刀</h4>
+                <table>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"><img src="/icon/arrow-right-s-fill.svg"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="gamepad" id="锤子">
+        <div class="head"><img src="./prop/hammer.png"></div>
+        <h2 class="left1em">锤子</h2>
+    </div>
+    <p><b>获得：第一天从维克托那里收到</b></p>
+    <p></p>结实又沉重的工具。<br>即使连续敲砸坚硬岩石也不会损坏。</p>
+    <div class="key">
+        <h3>消耗体力（每块岩石）</h3>
+        <ul>
+            <li><b>采掘 Lv.1~2</b>：8（6）</li>
+            <li><b>采掘 Lv.3~5</b>：7（5）</li>
+            <li><b>采掘 Lv.6~10</b>：6（4）</li>
+        </ul>
+        <h3>蓄力范围</h3>
+        <div class="flex_prop">
+            <div class="scope">
+                <h4>最初</h4>
+                <table>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"><img src="/icon/arrow-right-s-fill.svg"></th>
+                        <th class="valid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                </table>
+            </div>
+            <div class="scope">
+                <h4>铁锤子</h4>
+                <table>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"><img src="/icon/arrow-right-s-fill.svg"></th>
+                        <th class="valid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="scope">
+                <h4>银锤子</h4>
+                <table>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"><img src="/icon/arrow-right-s-fill.svg"></th>
+                        <th class="valid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                </table>
+            </div>
+            <div class="scope">
+                <h4>金锤子</h4>
+                <table>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="valid"></th>
+                        <th class="valid"><img src="/icon/arrow-right-s-fill.svg"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                </table>
+            </div>
+            <div class="scope">
+                <h4>山铜锤子</h4>
+                <table>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                    </tr>
+                    <tr>
+                        <th class="valid"></th>
+                        <th class="valid"><img src="/icon/arrow-right-s-fill.svg"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                    </tr>
+                    <tr>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="gamepad" id="水桶">
+        <div class="head"><img src="./prop/bucket.png"></div>
+        <h2 class="left1em">水桶</h2>
+    </div>
+    <p><b>获得：第一次下雨后的第二天早上从维克托那里收到</b></p>
+    <p>可以储存很多水的工具。</p>
+    <div class="key">
+        <h3>消耗体力（每桶水）</h3>
+        <ul>
+            <li><b>清淤 Lv.1~2</b>：8（6）</li>
+            <li><b>清淤 Lv.3~5</b>：7（5）</li>
+            <li><b>清淤 Lv.6~10</b>：6（4）</li>
+        </ul>
+        <p>※ 计量单位：初始的水桶。</p>
+        <h3>蓄力范围</h3>
+        <div style="width: 120px;">
+            <div class="scope">
+                <table>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"><img src="/icon/arrow-right-s-fill.svg"></th>
+                        <th class="valid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                </table>
+                <br>
+            </div>
+        </div>
+    </div>
+    <div class="gamepad" id="钓竿">
+        <div class="head"><img src="./prop/rod.png"></div>
+        <h2 class="left1em">钓竿</h2>
+    </div>
+    <p><b>获得：首次去马克斯的家时，从玛奴艾拉那里收到</b></p>
+    <p>柔软而细长的工具。<br>不管钓什么鱼都不会折断。</p>
+    <div class="key">
+        <h3>消耗体力（每条鱼）</h3>
+        <ul>
+            <li><b>钓鱼 Lv.1~2</b>：36（27）</li>
+            <li><b>钓鱼 Lv.3~5</b>：35（26）</li>
+            <li><b>钓鱼 Lv.6~10</b>：34（25）</li>
+        </ul>
+    </div>
+    <div class="gamepad" id="锄头">
+        <div class="head"><img src="./prop/hoe.png"></div>
+        <h2 class="left1em">锄头</h2>
+    </div>
+    <p><b>获得：第二天早上从维克托那里收到</b></p>
+    <p>农耕翻动农田的基本工具。</p>
+    <div class="key">
+        <h3>消耗体力（每格土地）</h3>
+        <ul>
+            <li><b>农耕 Lv.1~2</b>：8（6）</li>
+            <li><b>农耕 Lv.3~5</b>：7（5）</li>
+            <li><b>农耕 Lv.6~10</b>：5（3）</li>
+        </ul>
+        <h3>蓄力范围</h3>
+        <div class="flex_prop">
+            <div class="scope">
+                <h4>最初</h4>
+                <table>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"><img src="/icon/arrow-right-s-fill.svg"></th>
+                        <th class="valid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                </table>
+            </div>
+            <div class="scope">
+                <h4>铁锄头</h4>
+                <table>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"><img src="/icon/arrow-right-s-fill.svg"></th>
+                        <th class="valid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="scope">
+                <h4>银锄头</h4>
+                <table>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"><img src="/icon/arrow-right-s-fill.svg"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                </table>
+            </div>
+            <div class="scope">
+                <h4>金锄头</h4>
+                <table>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"><img src="/icon/arrow-right-s-fill.svg"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                </table>
+            </div>
+            <div class="scope">
+                <h4>山铜锄头</h4>
+                <table>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"><img src="/icon/arrow-right-s-fill.svg"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="gamepad" id="洒水壶">
+        <div class="head"><img src="./prop/watering-pot.png"></div>
+        <h2 class="left1em">洒水壶</h2>
+    </div>
+    <p><b>获得：第二天早上从维克托那里收到</b></p>
+    <p>用来为农作物浇水的工具。</p>
+    <div class="key">
+        <h3>消耗体力（每格土地）</h3>
+        <ul>
+            <li><b>农耕 Lv.1~2</b>：8（6）</li>
+            <li><b>农耕 Lv.3~5</b>：7（5）</li>
+            <li><b>农耕 Lv.6~10</b>：5（3）</li>
+        </ul>
+        <h3>升级所需</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>道具</th>
+                    <th>价格</th>
+                    <th>材料</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>铁洒水壶</td>
+                    <td>1,000G</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>银洒水壶</td>
+                    <td>3,000G</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>金洒水壶</td>
+                    <td>20,000G</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>山铜洒水壶</td>
+                    <td>150,000G</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>蓄力范围</h3>
+        <div class="flex_prop">
+            <div class="scope">
+                <h4>最初</h4>
+                <table>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"><img src="/icon/arrow-right-s-fill.svg"></th>
+                        <th class="valid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                </table>
+                <p class="mini">容量：20</p>
+            </div>
+            <div class="scope">
+                <h4>铁洒水壶</h4>
+                <table>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"><img src="/icon/arrow-right-s-fill.svg"></th>
+                        <th class="valid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                </table>
+                <p class="mini">容量：30</p>
+            </div>
+            <div class="scope">
+                <h4>银洒水壶</h4>
+                <table>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"><img src="/icon/arrow-right-s-fill.svg"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                </table>
+                <p class="mini">容量：40</p>
+            </div>
+            <div class="scope">
+                <h4>金洒水壶</h4>
+                <table>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"><img src="/icon/arrow-right-s-fill.svg"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                </table>
+                <p class="mini">容量：50</p>
+            </div>
+            <div class="scope">
+                <h4>山铜洒水壶</h4>
+                <table>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"><img src="/icon/arrow-right-s-fill.svg"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                        <th class="valid"></th>
+                    </tr>
+                    <tr>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                        <th class="invalid"></th>
+                    </tr>
+                </table>
+                <p class="mini">容量：99</p>
+            </div>
+        </div>
+    </div>
+    <div class="gamepad" id="照相机">
+        <div class="head"><img src="./prop/camera.png"></div>
+        <h2 class="left1em">照相机</h2>
+    </div>
+    <p><b>获得：第一次去博物馆的时候</b></p>
+    <p>可以捕捉到所有景物的高性能相机。<br>来留下些美好的回忆吧<br><br>（※ 拍照后并<strong>不能</strong>像其他游戏一样将照片储存到系统相册）</p>
+    <div class="gamepad" id="牵绳">
+        <div class="head"><img src="./prop/lanyard.png"></div>
+        <h2 class="left1em">牵绳</h2>
+    </div>
+    <p><b>获得：第一次扩建自家后去动物商店</b></p>
+    <p>和宠物一同外出散步使用的工具。<br>装好牵绳，情感融融地去散步吧！</p>
+</body>
+
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
+    <link rel="stylesheet" href="../iframe.css">
+    <title>矿山</title>
+    <style>
+        .mining_flex {
+            display: flex;
+            display: -webkit-flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mining_type {
+            width: 280px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>矿山</h1>
+    <p>挖矿的时候不能保存游戏。</p>
+    <h2>矿山类型</h2>
+    <div class="mining_flex">
+        <div class="mining_type">
+            <h3>初级矿山（矿山1）</h3>
+            <ul>
+                <li><b>入口</b>：牧场（1区）</li>
+                <li><b>层数</b>：10层</li>
+                <li><b>地鼠</b>：无</li>
+                <li><b>陷阱</b>：无</li>
+                <li><b>首次到达底层</b>：<br>可获得3个白色蛋白石</li>
+            </ul>
+        </div>
+        <div class="mining_type">
+            <h3>中级矿山（矿山2）</h3>
+            <ul>
+                <li><b>入口</b>：牧场（2区）</li>
+                <li><b>层数</b>：30层</li>
+                <li><b>地鼠</b>：Lv1</li>
+                <li><b>陷阱</b>：无</li>
+                <li><b>首次到达底层</b>：<br>可前往「熔岩洞窟」</li>
+            </ul>
+        </div>
+        <div class="mining_type">
+            <h3>高级矿山（矿山3）</h3>
+            <ul>
+                <li><b>入口</b>：牧场（3区）</li>
+                <li><b>层数</b>：50层</li>
+                <li><b>地鼠</b>：Lv2、Lv3</li>
+                <li><b>陷阱</b>：有</li>
+                <li><b>首次到达底层</b>：<br>可获得3个钻石</li>
+            </ul>
+        </div>
+    </div>
+    <h2>可以挖掘的矿石</h2>
+    <ul>
+        <li><b>矿脉</b>：墙上闪闪发光的地方，可采掘3次。</li>
+        <li><b>矿床</b>：地上闪闪发光的地方，要用锄头挖。</li>
+    </ul>
+    <table>
+        <thead>
+            <tr>
+                <th>名称</th>
+                <th>出现场所</th>
+                <th>说明</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>石子</td>
+                <td>全部</td>
+                <td>遍地都是。</td>
+            </tr>
+            <tr>
+                <td>铁矿石</td>
+                <td>全部</td>
+                <td>也挺多的。</td>
+            </tr>
+            <tr>
+                <td>银矿石</td>
+                <td>矿山2、矿山3</td>
+                <td>反正不缺。</td>
+            </tr>
+            <tr>
+                <td>金矿石</td>
+                <td>矿山3</td>
+                <td>连矿山3门口都有不少。</td>
+            </tr>
+            <tr>
+                <td>山铜矿石</td>
+                <td>矿山3</td>
+                <td>地下42层之后的偶数层有几率出现，地下50层一定出现。</td>
+            </tr>
+            <tr>
+                <td>白色蛋白石原石</td>
+                <td>矿山1</td>
+                <td>矿床小概率出现。（50%）</td>
+            </tr>
+            <tr>
+                <td>红绿柱石原石</td>
+                <td>矿山2</td>
+                <td>矿床小概率出现。（50%）</td>
+            </tr>
+            <tr>
+                <td>钻石原石</td>
+                <td>矿山2、矿山3</td>
+                <td>矿山2的矿脉（1%）超低概率出现。<br>矿山3的矿脉（2%）、矿床（5%）和山铜矿小概率出现。</td>
+            </tr>
+            <tr>
+                <td>红宝石原石</td>
+                <td>矿山2、矿山3</td>
+                <td>矿山2地下21~29的奇数层有几率出现，地下30层一定出现。<br>
+                    矿山3地下11~19的奇数层有几率出现，地下20层一定出现。</td>
+            </tr>
+            <tr>
+                <td>蓝宝石原石</td>
+                <td>矿山3</td>
+                <td>地下21~29的奇数层有几率出现，地下30层一定出现。</td>
+            </tr>
+            <tr>
+                <td>祖母绿原石</td>
+                <td>矿山3</td>
+                <td>地下31层之后的奇数层有几率出现，地下40层一定出现。</td>
+            </tr>
+            <tr>
+                <td>碳块</td>
+                <td>矿山2、矿山3</td>
+                <td>矿脉有概率出现。（10%）</td>
+            </tr>
+            <tr>
+                <td>海玻璃</td>
+                <td>矿山2、矿山3</td>
+                <td>矿脉有概率出现。（10%）</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="key">
+        <h3>陷阱</h3>
+        <p>矿山3层数为10的倍数以外则会出现陷阱，踩到陷阱会随机掉落1~10层，并根据掉落的层数受到伤害。</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>层数</th>
+                    <th>伤害</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>120</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>140</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>170</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>200</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>240</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>280</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>340</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>400</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>500</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>地鼠</h3>
+        <p>可以用锤子攻击地鼠，地鼠被打倒后会掉落物品。</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>等级</th>
+                    <th>出现</th>
+                    <th>能力</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Lv1</td>
+                    <td>矿山2<br>（10的倍数以外的层数）</td>
+                    <td>-</td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Lv2</td>
+                    <td>矿山3 地下1~29层<br>（10的倍数以外的层数）</td>
+                    <td>速度提升了</td>
+                </tr>
+                <tr>
+                    <td>Lv3</td>
+                    <td>矿山3 地下31~49层</td>
+                    <td>速度大幅提升，增加了电属性</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+    </div>
+</body>
+
+
+</html>

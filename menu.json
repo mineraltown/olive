@@ -1,0 +1,144 @@
+[
+    {
+        "基础知识": [
+            {
+                "name": "游戏开始",
+                "href": "knowledge/start.html"
+            },
+            {
+                "name": "基础知识",
+                "href": "knowledge/basic.html"
+            },
+            {
+                "name": "自宅",
+                "href": "knowledge/home.html"
+            },
+            {
+                "name": "牧场",
+                "href": "knowledge/pasture.html"
+            },
+            {
+                "name": "道具",
+                "href": "knowledge/prop.html"
+            },
+            {
+                "name": "矿山",
+                "href": "knowledge/mine.html"
+            }
+        ],
+        "牧场生活": [
+            {
+                "name": "农作物",
+                "href": "life/crop.html"
+            },
+            {
+                "name": "果树",
+                "href": "life/fruit.html"
+            },
+            {
+                "name": "花",
+                "href": "life/flower.html"
+            },
+            {
+                "name": "饲育",
+                "href": "life/animal.html"
+            },
+            {
+                "name": "养蜂",
+                "href": "life/bee.html"
+            },
+            {
+                "name": "宠物",
+                "href": "life/pet.html"
+            },
+            {
+                "name": "钓鱼",
+                "href": "life/fish.html"
+            },
+            {
+                "name": "加工机",
+                "href": "life/maker.html"
+            }
+        ],
+        "料理菜谱": [
+            {
+                "name": "沙拉",
+                "href": "food/salad.html"
+            },
+            {
+                "name": "汤菜",
+                "href": "food/soup.html"
+            },
+            {
+                "name": "主食",
+                "href": "food/main_course.html"
+            },
+            {
+                "name": "点心",
+                "href": "food/dessert.html"
+            },
+            {
+                "name": "其他",
+                "href": "food/other.html"
+            }
+        ],
+        "居民交流": [
+            {
+                "name": "居民",
+                "href": "resident/resident.html"
+            },
+            {
+                "name": "事件",
+                "href": "resident/event.html"
+            },
+            {
+                "name": "日历",
+                "href": "resident/calendar.html"
+            },
+            {
+                "name": "店铺",
+                "href": "resident/shop.html"
+            },
+            {
+                "name": "服装",
+                "href": "resident/clothing.html"
+            },
+            {
+                "name": "博物馆",
+                "href": "resident/museum.html"
+            }
+        ],
+        "其他": [
+            {
+                "name": "称号",
+                "href": "other/title.html"
+            },
+            {
+                "name": "成就",
+                "href": "other/achievement.html"
+            }
+        ]
+    },
+    {
+        "牧场": {
+            "icon": "seedling-fill.svg",
+            "href": "pasture.html"
+        },
+        "居民": {
+            "icon": "user-2-line.svg",
+            "href": "resident.html"
+        },
+        "村庄": {
+            "icon": "home-3-line.svg",
+            "href": "town.html"
+        },
+        "事件": {
+            "icon": "calendar-line.svg",
+            "href": "event.html"
+        },
+        "其他": {
+            "icon": "more-fill.svg",
+            "href": "other.html"
+        }
+    }
+]
