@@ -6,11 +6,612 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
     <link rel="stylesheet" href="../iframe.css">
-    <title></title>
+    <title>农作</title>
+    <style>
+        @media only screen and (max-width: 800px) {
+            th,
+            td {
+                height: 1.5em;
+                line-height: 1.5em;
+                padding: 3px;
+                text-align: center;
+            }
+
+            .mobile {
+                display: none;
+            }
+        }
+
+        @media only screen and (min-width: 801px) {
+            thead {
+                background-color: #666;
+                color: #fff;
+            }
+
+            th,
+            td {
+                height: 1.7em;
+                line-height: 1.7em;
+                padding: 5px 10px;
+                text-align: center;
+            }
+
+            tbody tr:nth-child(odd) {
+                background-color: #eee;
+            }
+
+            tbody tr:nth-child(even) {
+                background-color: #fff;
+            }
+
+            tbody td:nth-child(odd) {
+                border: solid 1px #fff;
+            }
+
+            tbody td:nth-child(even) {
+                border: solid 1px #eee;
+            }
+        }
+
+        .spring {
+            color: #fff;
+            background-color: #aad7d2;
+        }
+        .summer {
+            color: #fff;
+            background-color: #88c283;
+        }
+        .autumn {
+            color: #fff;
+            background-color: #efbb66;
+        }
+        .winter {
+            color: #fff;
+            background-color: #a7cae6;
+        }
+        .none {
+            background-color: #cccccc;
+        }
+    </style>
 </head>
 
 <body>
-    <h1></h1>
+    <h1>农作</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>名称</th>
+                <!-- <th>日文</th> -->
+                <th>春</th>
+                <th>夏</th>
+                <th>秋</th>
+                <th>冬</th>
+                <th>生长周期</th>
+                <th>收获数量</th>
+                <th>种子价格（G）</th>
+                <th class="mobile">出货价格（10☆）</th>
+                <th class="mobile">稀有品种</th>
+                <th class="mobile">出货价格（10☆）</th>
+                <th class="mobile">贩售条件</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>马铃薯</td>
+                <!-- <td>じゃがいも</td> -->
+                <td class="spring">○</td>
+                <td class="summer">○</td>
+                <td class="none">×</td>
+                <td class="winter">○</td>
+                <td>6</td>
+                <td>4</td>
+                <td>120</td>
+                <td class="mobile">63</td>
+                <td class="mobile">星形马铃薯</td>
+                <td class="mobile">126</td>
+                <td class="mobile"></td>
+            </tr>
+            <tr>
+                <td>芜菁</td>
+                <!-- <td>かぶ</td> -->
+                <td class="spring">○</td>
+                <td class="none">×</td>
+                <td class="none">×</td>
+                <td class="none">×</td>
+                <td>4</td>
+                <td>1</td>
+                <td>160</td>
+                <td class="mobile">288</td>
+                <td class="mobile">巨大芜菁</td>
+                <td class="mobile">576</td>
+                <td class="mobile"></td>
+            </tr>
+            <tr>
+                <td>黄瓜</td>
+                <!-- <td>きゅうり</td> -->
+                <td class="spring">○</td>
+                <td class="none">×</td>
+                <td class="none">×</td>
+                <td class="none">×</td>
+                <td>7(4)</td>
+                <td>3</td>
+                <td>200</td>
+                <td class="mobile">105</td>
+                <td class="mobile"></td>
+                <td class="mobile"></td>
+                <td class="mobile"></td>
+            </tr>
+            <tr>
+                <td>洋葱</td>
+                <!-- <td>たまねぎ</td> -->
+                <td class="spring">○</td>
+                <td class="summer">○</td>
+                <td class="none">×</td>
+                <td class="none">×</td>
+                <td>6</td>
+                <td>1</td>
+                <td>220</td>
+                <td class="mobile">429</td>
+                <td class="mobile"></td>
+                <td class="mobile"></td>
+                <td class="mobile">出货野生的作物</td>
+            </tr>
+            <tr>
+                <td>草莓</td>
+                <!-- <td>いちご</td> -->
+                <td class="spring">○</td>
+                <td class="none">×</td>
+                <td class="none">×</td>
+                <td class="none">×</td>
+                <td>8</td>
+                <td>3</td>
+                <td>250</td>
+                <td class="mobile">188</td>
+                <td class="mobile">黄金草莓</td>
+                <td class="mobile">375</td>
+                <td class="mobile">出货野生的作物</td>
+            </tr>
+            <tr>
+                <td>大蒜</td>
+                <!-- <td>にんにく</td> -->
+                <td class="spring">○</td>
+                <td class="none">×</td>
+                <td class="none">×</td>
+                <td class="none">×</td>
+                <td>5</td>
+                <td>1</td>
+                <td>300</td>
+                <td class="mobile">473</td>
+                <td class="mobile"></td>
+                <td class="mobile"></td>
+                <td class="mobile">农耕等级Lv.9触发事件后</td>
+            </tr>
+            <tr>
+                <td>西葫芦</td>
+                <!-- <td>ズッキーニ</td> -->
+                <td class="none">×</td>
+                <td class="summer">○</td>
+                <td class="none">×</td>
+                <td class="none">×</td>
+                <td>8</td>
+                <td>2</td>
+                <td>160</td>
+                <td class="mobile">216</td>
+                <td class="mobile"></td>
+                <td class="mobile"></td>
+                <td class="mobile">出货野生的品种</td>
+            </tr>
+            <tr>
+                <td>南瓜</td>
+                <!-- <td>かぼちゃ</td> -->
+                <td class="none">×</td>
+                <td class="summer">○</td>
+                <td class="none">×</td>
+                <td class="none">×</td>
+                <td>5</td>
+                <td>1</td>
+                <td>180</td>
+                <td class="mobile">405</td>
+                <td class="mobile"></td>
+                <td class="mobile"></td>
+                <td class="mobile"></td>
+            </tr>
+            <tr>
+                <td>玉米</td>
+                <!-- <td>とうもろこし</td> -->
+                <td class="none">×</td>
+                <td class="summer">○</td>
+                <td class="none">×</td>
+                <td class="none">×</td>
+                <td>8(4)</td>
+                <td>1</td>
+                <td>220</td>
+                <td class="mobile">363</td>
+                <td class="mobile">彩粒玉米</td>
+                <td class="mobile">726</td>
+                <td class="mobile"></td>
+            </tr>
+            <tr>
+                <td>番茄</td>
+                <!-- <td>トマト</td> -->
+                <td class="none">×</td>
+                <td class="summer">○</td>
+                <td class="autumn">○</td>
+                <td class="none">×</td>
+                <td>6</td>
+                <td>3</td>
+                <td>250</td>
+                <td class="mobile">137</td>
+                <td class="mobile">巨大番茄</td>
+                <td class="mobile">273</td>
+                <td class="mobile"></td>
+            </tr>
+            <tr>
+                <td>灯笼椒</td>
+                <!-- <td>パプリカ</td> -->
+                <td class="none">×</td>
+                <td class="summer">○</td>
+                <td class="none">×</td>
+                <td class="none">×</td>
+                <td>7(4)</td>
+                <td>3</td>
+                <td>280</td>
+                <td class="mobile">153</td>
+                <td class="mobile"></td>
+                <td class="mobile"></td>
+                <td class="mobile"></td>
+            </tr>
+            <tr>
+                <td>茄子</td>
+                <!-- <td>なす</td> -->
+                <td class="none">×</td>
+                <td class="summer">○</td>
+                <td class="autumn">○</td>
+                <td class="none">×</td>
+                <td>7(4)</td>
+                <td>1</td>
+                <td>300</td>
+                <td class="mobile">165</td>
+                <td class="mobile">球形茄子</td>
+                <td class="mobile">330</td>
+                <td class="mobile"></td>
+            </tr>
+            <tr>
+                <td>蜜瓜</td>
+                <!-- <td>メロン</td> -->
+                <td class="none">×</td>
+                <td class="summer">○</td>
+                <td class="autumn">○</td>
+                <td class="none">×</td>
+                <td>7</td>
+                <td>1</td>
+                <td>350</td>
+                <td class="mobile">788</td>
+                <td class="mobile">金蜜瓜</td>
+                <td class="mobile">1575</td>
+                <td class="mobile">出货野生的作物</td>
+            </tr>
+            <tr>
+                <td>青椒</td>
+                <!-- <td>ピーマン</td> -->
+                <td class="none">×</td>
+                <td class="summer">○</td>
+                <td class="autumn">○</td>
+                <td class="none">×</td>
+                <td>8(5)</td>
+                <td>4</td>
+                <td>400</td>
+                <td class="mobile">165</td>
+                <td class="mobile"></td>
+                <td class="mobile"></td>
+                <td class="mobile"></td>
+            </tr>
+            <tr>
+                <td>凤梨</td>
+                <!-- <td>パイナップル</td> -->
+                <td class="none">×</td>
+                <td class="summer">○</td>
+                <td class="none">×</td>
+                <td class="none">×</td>
+                <td>6</td>
+                <td>1</td>
+                <td>420</td>
+                <td class="mobile">945</td>
+                <td class="mobile"></td>
+                <td class="mobile"></td>
+                <td class="mobile">出货野生的作物</td>
+            </tr>
+            <tr>
+                <td>西瓜</td>
+                <!-- <td>すいか</td> -->
+                <td class="none">×</td>
+                <td class="summer">○</td>
+                <td class="none">×</td>
+                <td class="none">×</td>
+                <td>9</td>
+                <td>1</td>
+                <td>1000</td>
+                <td class="mobile">2250</td>
+                <td class="mobile"></td>
+                <td class="mobile"></td>
+                <td class="mobile">农耕等级Lv.9触发事件后</td>
+            </tr>
+            <tr>
+                <td>菠菜</td>
+                <!-- <td>ほうれんそう</td> -->
+                <td class="none">×</td>
+                <td class="none">×</td>
+                <td class="autumn">○</td>
+                <td class="none">×</td>
+                <td>4</td>
+                <td>1</td>
+                <td>160</td>
+                <td class="mobile">360</td>
+                <td class="mobile">心形菠菜</td>
+                <td class="mobile">720</td>
+                <td class="mobile"></td>
+            </tr>
+            <tr>
+                <td>胡萝卜</td>
+                <!-- <td>にんじん</td> -->
+                <td class="none">×</td>
+                <td class="none">×</td>
+                <td class="autumn">○</td>
+                <td class="winter">○</td>
+                <td>5</td>
+                <td>1</td>
+                <td>200</td>
+                <td class="mobile">450</td>
+                <td class="mobile"></td>
+                <td class="mobile"></td>
+                <td class="mobile"></td>
+            </tr>
+            <tr>
+                <td>秋葵</td>
+                <!-- <td>オクラ</td> -->
+                <td class="none">×</td>
+                <td class="none">×</td>
+                <td class="autumn">○</td>
+                <td class="none">×</td>
+                <td>8(4)</td>
+                <td>4</td>
+                <td>240</td>
+                <td class="mobile">108</td>
+                <td class="mobile"></td>
+                <td class="mobile"></td>
+                <td class="mobile"></td>
+            </tr>
+            <tr>
+                <td>青菜</td>
+                <!-- <td>ちんげんさい</td> -->
+                <td class="none">×</td>
+                <td class="none">×</td>
+                <td class="autumn">○</td>
+                <td class="winter">○</td>
+                <td>9</td>
+                <td>2</td>
+                <td>280</td>
+                <td class="mobile">378</td>
+                <td class="mobile"></td>
+                <td class="mobile"></td>
+                <td class="mobile">农耕等级Lv.9触发事件后</td>
+            </tr>
+            <tr>
+                <td>番薯</td>
+                <!-- <td>さつまいも</td> -->
+                <td class="none">×</td>
+                <td class="none">×</td>
+                <td class="autumn">○</td>
+                <td class="none">×</td>
+                <td>6(4)</td>
+                <td>1</td>
+                <td>320</td>
+                <td class="mobile">576</td>
+                <td class="mobile">巨大番薯</td>
+                <td class="mobile">1152</td>
+                <td class="mobile"></td>
+            </tr>
+            <tr>
+                <td>辣椒</td>
+                <!-- <td>とうがらし</td> -->
+                <td class="none">×</td>
+                <td class="none">×</td>
+                <td class="autumn">○</td>
+                <td class="none">×</td>
+                <td>9</td>
+                <td>3</td>
+                <td>400</td>
+                <td class="mobile">360</td>
+                <td class="mobile"></td>
+                <td class="mobile"></td>
+                <td class="mobile">出货野生的作物</td>
+            </tr>
+            <tr>
+                <td>白萝卜</td>
+                <!-- <td>だいこん</td> -->
+                <td class="spring">○</td>
+                <td class="none">×</td>
+                <td class="none">×</td>
+                <td class="winter">○</td>
+                <td>4</td>
+                <td>1</td>
+                <td>180</td>
+                <td class="mobile">351</td>
+                <td class="mobile">长腿白萝卜</td>
+                <td class="mobile">702</td>
+                <td class="mobile"></td>
+            </tr>
+            <tr>
+                <td>牛蒡</td>
+                <!-- <td>ごぼう</td> -->
+                <td class="none">×</td>
+                <td class="none">×</td>
+                <td class="none">×</td>
+                <td class="winter">○</td>
+                <td>7</td>
+                <td>3</td>
+                <td>250</td>
+                <td class="mobile">200</td>
+                <td class="mobile"></td>
+                <td class="mobile"></td>
+                <td class="mobile"></td>
+            </tr>
+            <tr>
+                <td>西兰花</td>
+                <!-- <td>ブロッコリー</td> -->
+                <td class="spring">○</td>
+                <td class="none">×</td>
+                <td class="none">×</td>
+                <td class="winter">○</td>
+                <td>6(3)</td>
+                <td>3</td>
+                <td>300</td>
+                <td class="mobile">180</td>
+                <td class="mobile"></td>
+                <td class="mobile"></td>
+                <td class="mobile"></td>
+            </tr>
+            <tr>
+                <td>卷心菜</td>
+                <!-- <td>きゃべつ</td> -->
+                <td class="spring">○</td>
+                <td class="none">×</td>
+                <td class="none">×</td>
+                <td class="winter">○</td>
+                <td>7</td>
+                <td>1</td>
+                <td>320</td>
+                <td class="mobile">672</td>
+                <td class="mobile"></td>
+                <td class="mobile"></td>
+                <td class="mobile">出货野生的作物</td>
+            </tr>
+            <tr>
+                <td>白菜</td>
+                <!-- <td>はくさい</td> -->
+                <td class="none">×</td>
+                <td class="none">×</td>
+                <td class="none">×</td>
+                <td class="winter">○</td>
+                <td>6</td>
+                <td>1</td>
+                <td>340</td>
+                <td class="mobile">663</td>
+                <td class="mobile">黄金白菜</td>
+                <td class="mobile">1326</td>
+                <td class="mobile">农耕等级Lv.9触发事件后</td>
+            </tr>
+            <tr>
+                <td>大葱</td>
+                <!-- <td>ながねぎ</td> -->
+                <td class="none">×</td>
+                <td class="none">×</td>
+                <td class="none">×</td>
+                <td class="winter">○</td>
+                <td>4</td>
+                <td>4</td>
+                <td>500</td>
+                <td class="mobile">300</td>
+                <td class="mobile">巨大葱</td>
+                <td class="mobile">600</td>
+                <td class="mobile">出货野生的作物</td>
+            </tr>
+            <tr>
+                <td>小萝卜</td>
+                <!-- <td>ラディッシュ</td> -->
+                <td class="spring">○</td>
+                <td class="summer">○</td>
+                <td class="autumn">○</td>
+                <td class="none">×</td>
+                <td>5</td>
+                <td>4</td>
+                <td>100</td>
+                <td class="mobile">45</td>
+                <td class="mobile"></td>
+                <td class="mobile"></td>
+                <td class="mobile"></td>
+            </tr>
+            <tr>
+                <td>牧草</td>
+                <!-- <td>牧草</td> -->
+                <td class="spring">○</td>
+                <td class="summer">○</td>
+                <td class="autumn">○</td>
+                <td class="none">×</td>
+                <td>5(2)</td>
+                <td>3</td>
+                <td>100</td>
+                <td class="mobile">20</td>
+                <td class="mobile"></td>
+                <td class="mobile"></td>
+                <td class="mobile"></td>
+            </tr>
+            <tr>
+                <td>茶叶</td>
+                <!-- <td>茶葉</td> -->
+                <td class="spring">○</td>
+                <td class="summer">○</td>
+                <td class="autumn">○</td>
+                <td class="none">×</td>
+                <td>12</td>
+                <td>5</td>
+                <td>180</td>
+                <td class="mobile">96</td>
+                <td class="mobile"></td>
+                <td class="mobile"></td>
+                <td class="mobile"></td>
+            </tr>
+            <tr>
+                <td>小麦</td>
+                <!-- <td>小麦</td> -->
+                <td class="spring">○</td>
+                <td class="summer">○</td>
+                <td class="autumn">○</td>
+                <td class="none">×</td>
+                <td>12</td>
+                <td>5</td>
+                <td>220</td>
+                <td class="mobile">132</td>
+                <td class="mobile"></td>
+                <td class="mobile"></td>
+                <td class="mobile">种子名称：麦苗</td>
+            </tr>
+            <tr>
+                <td>大豆</td>
+                <!-- <td>豆</td> -->
+                <td class="spring">○</td>
+                <td class="summer">○</td>
+                <td class="autumn">○</td>
+                <td class="none">×</td>
+                <td>12</td>
+                <td>5</td>
+                <td>200</td>
+                <td class="mobile">120</td>
+                <td class="mobile"></td>
+                <td class="mobile"></td>
+                <td class="mobile"></td>
+            </tr>
+            <tr>
+                <td>米</td>
+                <!-- <td>お米</td> -->
+                <td class="spring">○</td>
+                <td class="summer">○</td>
+                <td class="autumn">○</td>
+                <td class="none">×</td>
+                <td>14</td>
+                <td>6</td>
+                <td>250</td>
+                <td class="mobile">125</td>
+                <td class="mobile"></td>
+                <td class="mobile"></td>
+                <td class="mobile">种子名称：谷苗</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>※ 出货价格为10☆时的基础价格，并不计算农耕等级对作物价格的影响。<br>所以实际游戏时的，达到10☆的作物出售价格会更高一些。</p>
+    <p>※ 表格中的价格均为「普通模式」下的价格。</p>
+    <h3>连作</h3>
+    <p>即收获一次以后，过几天还可以继续收获的作物。<br>生长周期有括号的是连作作物，括号内为间隔的天数。<br>除牧草外均为连续收获 <b>3</b> 次，牧草是连续收获 <b>6</b> 次。</p>
 </body>
 
 </html>
